@@ -15,3 +15,16 @@ img {
 #coin {
 	width: 300px;
 }
+
+h2 {
+	display: inline;
+	position: fixed;
+}
+
+#label {
+	left: 45%;
+}
+
+#score {
+	left: 51%;
+}

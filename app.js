@@ -12,6 +12,7 @@ function isTouching(a, b) {
 
 const avatar = document.querySelector("#player");
 const coin = document.querySelector('#coin');
+const score = document.querySelector('#score');
 
 window.addEventListener("keyup", function(e){
 	if(e.key === "ArrowDown" || e.key === "Down"){
@@ -32,7 +33,11 @@ window.addEventListener("keyup", function(e){
 		avatar.style.transform = 'scale(-1,1)'
 	}
 
-	if(isTouching(avatar,coin)) moveCoin();
+	if(isTouching(avatar,coin)){
+		 moveCoin();
+		 let scoreNum = parseInt(score.innerText) + 1;
+		 score.innerText = `${scoreNum}`;
+	}
 
 });
 
